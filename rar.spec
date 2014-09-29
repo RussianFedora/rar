@@ -4,7 +4,7 @@ Summary:    Utility for creation RAR archives
 Summary(ru):Утилита для создания архивов RAR
 Name:       rar
 Version:    5.1.1
-Release:    2%{dist}
+Release:    2.1%{dist}
 Epoch:      1
 
 License:    Proprietary
@@ -134,7 +134,10 @@ popd
 %doc %{_mandir}/man1/unrar.1.gz
 
 %changelog
-* Sun Sep 29 2014 carasin berlogue <carasin DOT berlogue AT mail DOT ru> - 5.1.1-2.R
+* Mon Sep 29 2014 carasin berlogue <carasin DOT berlogue AT mail DOT ru> - 5.1.1-2.1.R
+- bump version for correct package build on RFR19 and EL7
+
+* Mon Sep 29 2014 carasin berlogue <carasin DOT berlogue AT mail DOT ru> - 5.1.1-2.R
 - add <unrar> and <-docs> subpackages
 - add <Epoch:1> for replacement too old <unrar> version from <rpmfusion> repo
 - add RAR and UNRAR manual pages
