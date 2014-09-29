@@ -1,0 +1,134 @@
+From roshal@rarlab.com Thu Sep 11 18:26:49 2014
+Return-path: <roshal@rarlab.com>
+Authentication-Results: mxs.mail.ru; spf=none () smtp.mailfrom=roshal@rarlab.com smtp.helo=backmail00.win-rar.com;
+	 dkim=pass header.i=rarlab.com
+Received-SPF: none
+Received: from [212.91.234.154] (port=36553 helo=backmail00.win-rar.com)
+	by mx104.mail.ru with esmtp (envelope-from <roshal@rarlab.com>)
+	id 1XS95D-0001Al-Ak
+	for carasin.berlogue@mail.ru; Thu, 11 Sep 2014 22:27:05 +0400
+X-Mru-BL: 0:0:1123
+X-Mru-PTR: backmail00.win-rar.com
+X-Mru-NR: 1
+X-Mru-OF: Linux (Ethernet or modem)
+X-Mru-RC: DE
+Received: from imap.win-rar.com (localhost.localdomain [127.0.0.1])
+	by backmail00.win-rar.com (Postfix) with ESMTP id 5367D147AE3
+	for <carasin.berlogue@mail.ru>; Thu, 11 Sep 2014 20:27:00 +0200 (CEST)
+Received: from backmail00.win-rar.com (localhost.localdomain [127.0.0.1])
+	by backmail00.win-rar.com (Postfix) with ESMTP id 2465C147AE4
+	for <carasin.berlogue@mail.ru>; Thu, 11 Sep 2014 20:27:00 +0200 (CEST)
+Authentication-Results: imap.win-rar.com; dkim=pass header.i=@rarlab.com; domainkeys=pass header.from=roshal@rarlab.com
+X-DKIM-Authentication-Results: pass
+Received: from smtp.rarlab.com (smtp.rarlab.com [78.46.210.138])
+	(using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))
+	(Client CN "smtp.rarlab.com", Issuer "winRAR" (verified OK))
+	by backmail00.win-rar.com (Postfix) with ESMTP id 14A7A147AE3
+	for <carasin.berlogue@mail.ru>; Thu, 11 Sep 2014 20:26:59 +0200 (CEST)
+Received: from smtp.rarlab.com (localhost.localdomain [127.0.0.1])
+	by smtp.rarlab.com (Postfix) with ESMTP id 8C7271132D55
+	for <carasin.berlogue@mail.ru>; Thu, 11 Sep 2014 20:26:59 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed; d=rarlab.com; h=date:from
+	:reply-to:message-id:to:subject:in-reply-to:references
+	:mime-version:content-type:content-transfer-encoding; s=
+	smtp-2010-12; bh=FJB+FEFZVHB2TsfkaiG8eLkZm8o=; b=kRfpjpZdpzNKfOV
+	FhRDfF6CNj//SU51tMAcfyMWOtp1PpgqFypbb2bTIIwnITpfYrNfRWTsZYgSQuYk
+	7GhDipgF2n78qfk8f37zwOEyciy7JFDiCsLc8kHwihWvsWbumYUVCjDNVfcxu58m
+	/FrTVDcUJ1fVkZyb/I9niYkm7xTw=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=rarlab.com; h=date:from:reply-to
+	:message-id:to:subject:in-reply-to:references:mime-version
+	:content-type:content-transfer-encoding; q=dns; s=smtp-2010-12;
+	 b=MDB4f9ULId09YtEU8oIlFhkwdlVivuXdavF+wO4PzHD/+BWErbxVGShm9yfjj
+	PzuiOTbM+mB0dxD6r/vqCD/Chbn0aRMAWlBdgXjP1KrPNBelgoYFzJ7ybQtoNmf2
+	mgsGyrMupEeQEul/JZdaRwLQ3n4vk9DI6SmDGDyJSdlBrQ=
+Received: from [192.168.1.3] (unknown [94.51.4.148])
+	by smtp.rarlab.com (Postfix) with ESMTP id 9A9FE1132D3F
+	for <carasin.berlogue@mail.ru>; Thu, 11 Sep 2014 20:26:58 +0200 (CEST)
+Date: Fri, 12 Sep 2014 00:26:49 +0600
+From: Eugene Roshal <roshal@rarlab.com>
+Reply-To: Eugene Roshal <roshal@rarlab.com>
+X-Priority: 3 (Normal)
+To: =?utf-8?B?0JrQuNGA0LjQu9C7INCg0YPRgdC40L3QvtCy?= <carasin.berlogue@mail.ru>
+In-Reply-To: <1410459259.630210370@f60.i.mail.ru>
+References: <1410430628.852423554@f123.i.mail.ru> <90210731.20140911163035@win-rar.com> <927583600.20140911232104@rarlab.com> <1410459259.630210370@f60.i.mail.ru>
+MIME-Version: 1.0
+Message-ID: <705019386.20140912002649@rarlab.com>
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Subject: Re: Fwd: [Russian Fedora] Request for permission to distribute RAR or the script that downloads and installs RAR
+X-Anti-Virus: Kaspersky Anti-Virus for Linux Mail Server 5.6.45/RELEASE,
+	 bases: 20140401 #7726142, check: 20140911 notchecked
+X-Spam: Not detected
+X-DMARC-Policy: no
+X-Mras: Ok
+X-Mru-Authenticated-Sender: roshal@rarlab.com
+
+Hello,
+
+OK.
+
+Eugene
+
+>  Thanks a lot!
+
+> Furthermore, I'm going to put a text file containing this=C2=A0dialogue i=
+nto result RPM packages.
+
+> Thu, 11 Sep 2014 23:21:04 +0600 =D0=BE=D1=82 Eugene Roshal <roshal@rarlab=
+.com>:
+>>Hello,
+>>
+>>> I would like to use one of the next two options:
+>>
+>>You can do it provided that all original files (and only them),
+>>such as license.txt and others, are included.
+>>
+>>Eugene
+>>
+>>> This is a forwarded message
+>>> From: =D0=9A=D0=B8=D1=80=D0=B8=D0=BB=D0=BB =D0=A0=D1=83=D1=81=D0=B8=D0=
+=BD=D0=BE=D0=B2 < carasin.berlogue@mail.ru >
+>>> To:  support@rarlab.com
+>>> Date: Thursday, September 11, 2014, 12:17:08 PM
+>>> Subject: [Russian Fedora] Request for permission to distribute RAR
+>>> or the script that downloads and installs RAR
+>>
+>>> =3D=3D=3D8<=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3DOriginal message t=
+ext=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=20
+>>>  Good day!
+>>
+>>> My name is Kirill Rusinov.=C2=A0I am a one of Russian Fedora repository=
+ maintainers.
+>>
+>>> I would like to=C2=A0provide the ability to install and uninstall RAR a=
+rchiver
+>>> with help of package manager=C2=A0(YUM and/or RPM) for our repository u=
+sers.
+>>> This is impossible now because it=C2=A0conflicts the next EULA items:
+>>
+>>> 3.b. The software's unlicensed trial version  may not be distributed
+>>> inside of any other software package without written permission.
+>>> The software must remain in the original unmodified installation
+>>> file for download without any barrier and conditions to the user
+>>> such as collecting fees for the download or making the download
+>>> conditional on the user giving his contact data.
+>>
+>>> 3.c. The unmodified installation file of WinRAR must be provided pure
+>>> and unpaired. Any bundling is interdicted. In particular  the use
+>>> of any install or download software which is providing any kind
+>>> of download bundles is prohibited unless granted by win.rar GmbH
+>>> in written form.
+>>
+>>> I would like to use one of the next two options:
+>>
+>>> 1. Create the RPM package containing RAR (and perhaps=C2=A0UNRAR).
+>>
+>>> 2. Create the RPM package containing shell script that=C2=A0downloads a=
+nd installs RAR.
+>>
+>>> Please, answer my question: may we realize one of options above (or bot=
+h)?
+>>> The result packages will be stored at repository mirrors and KOJI
+>>> build server. Our=C2=A0purpose is not to distribute any hacks/cracks =
+=E2=80=94 only original files.
+
