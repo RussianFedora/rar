@@ -89,19 +89,19 @@ mkdir -p %{buildroot}%{_mandir}/man1
 
 # Install RAR files
 pushd %{buildroot}/%{name}
-    install -m 755 %{name} %{buildroot}%{_bindir}/%{name}
-    install -m 755 unrar %{buildroot}%{_bindir}/unrar
-    install -m 755 default.sfx %{buildroot}%{_libdir}/default.sfx
-    install -m 644 rarfiles.lst %{buildroot}%{_sysconfdir}/rarfiles.lst
-    install -m 644 %{SOURCE2} %{buildroot}%{_defaultdocdir}/%{name}-%{version}/Permission_to_distribute_RAR.mbox
-    install -m 644 acknow.txt %{buildroot}%{_defaultdocdir}/%{name}-%{version}/acknow.txt
-    install -m 644 license.txt %{buildroot}%{_defaultdocdir}/%{name}-%{version}/license.txt
-    install -m 644 order.htm %{buildroot}%{_defaultdocdir}/%{name}-%{version}/order.htm
-    install -m 644 rar.txt %{buildroot}%{_defaultdocdir}/%{name}-%{version}/rar.txt
-    install -m 644 readme.txt %{buildroot}%{_defaultdocdir}/%{name}-%{version}/readme.txt
-    install -m 644 whatsnew.txt %{buildroot}%{_defaultdocdir}/%{name}-%{version}/whatsnew.txt
-    cp %{SOURCE3} %{name}.1
-    cp %{SOURCE4} unrar.1
+    install -pm 755 %{name} %{buildroot}%{_bindir}/%{name}
+    install -pm 755 unrar %{buildroot}%{_bindir}/unrar
+    install -pm 755 default.sfx %{buildroot}%{_libdir}/default.sfx
+    install -pm 644 rarfiles.lst %{buildroot}%{_sysconfdir}/rarfiles.lst
+    install -pm 644 %{SOURCE2} %{buildroot}%{_defaultdocdir}/%{name}-%{version}/Permission_to_distribute_RAR.mbox
+    install -pm 644 acknow.txt %{buildroot}%{_defaultdocdir}/%{name}-%{version}/acknow.txt
+    install -pm 644 license.txt %{buildroot}%{_defaultdocdir}/%{name}-%{version}/license.txt
+    install -pm 644 order.htm %{buildroot}%{_defaultdocdir}/%{name}-%{version}/order.htm
+    install -pm 644 rar.txt %{buildroot}%{_defaultdocdir}/%{name}-%{version}/rar.txt
+    install -pm 644 readme.txt %{buildroot}%{_defaultdocdir}/%{name}-%{version}/readme.txt
+    install -pm 644 whatsnew.txt %{buildroot}%{_defaultdocdir}/%{name}-%{version}/whatsnew.txt
+    cp -p %{SOURCE3} %{name}.1
+    cp -p %{SOURCE4} unrar.1
     sed -e 's|_path_|%{_defaultdocdir}/%{name}-%{version}|g' -i %{name}.1
     sed -e 's|_path_|%{_defaultdocdir}/%{name}-%{version}|g' -i unrar.1
     gzip -c %{name}.1 > %{buildroot}%{_mandir}/man1/%{name}.1.gz
@@ -134,10 +134,11 @@ popd
 %doc %{_mandir}/man1/unrar.1.gz
 
 %changelog
-* Sun Sep 28 2014 carasin berlogue <carasin DOT berlogue AT mail DOT ru> - 5.1.1-2.R
+* Sun Sep 29 2014 carasin berlogue <carasin DOT berlogue AT mail DOT ru> - 5.1.1-2.R
 - add <unrar> and <-docs> subpackages
 - add <Epoch:1> for replacement too old <unrar> version from <rpmfusion> repo
 - add RAR and UNRAR manual pages
+- clean up *.spec file
 
 * Sun Sep 21 2014 carasin berlogue <carasin DOT berlogue AT mail DOT ru> - 5.1.1-1.R
 - initial build for Fedora
