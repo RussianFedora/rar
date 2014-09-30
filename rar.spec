@@ -73,9 +73,9 @@ mkdir -p %{buildroot}
 
 pushd %{buildroot}
     %ifarch x86_64
-        gzip -dkc %{SOURCE0} > %{name}-%{version}.tar
+        gzip -dc %{SOURCE0} > %{name}-%{version}.tar
     %else
-        gzip -dkc %{SOURCE1} > %{name}-%{version}.tar
+        gzip -dc %{SOURCE1} > %{name}-%{version}.tar
     %endif
 
     tar -xf %{name}-%{version}.tar
@@ -135,7 +135,8 @@ popd
 
 %changelog
 * Mon Sep 29 2014 carasin berlogue <carasin DOT berlogue AT mail DOT ru> - 5.1.1-2.1.R
-- bump version for correct package build on RFR19 and EL7
+- remove <-k> GZIP option, because GZIP has not this feature at F19 and EL7
+- bump version for correct package building on F19 and EL7
 
 * Mon Sep 29 2014 carasin berlogue <carasin DOT berlogue AT mail DOT ru> - 5.1.1-2.R
 - add <unrar> and <-docs> subpackages
