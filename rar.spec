@@ -71,15 +71,11 @@ contents of archives created with the RAR archiver version 1.50 and above.
 rm -rf %{buildroot}
 mkdir -p %{buildroot}
 
-pushd %{buildroot}
-    %ifarch x86_64
-        gzip -dc %{SOURCE0} > %{name}-%{version}.tar
-    %else
-        gzip -dc %{SOURCE1} > %{name}-%{version}.tar
-    %endif
-
-    tar -xf %{name}-%{version}.tar
-popd
+%ifarch x86_64
+    tar -xvf %{SOURCE0}
+%else
+    tar -xvf %{SOURCE1}
+%endif
 
 mkdir -p %{buildroot}%{_bindir}
 mkdir -p %{buildroot}%{_libdir}
@@ -88,7 +84,7 @@ mkdir -p %{buildroot}%{_defaultdocdir}/%{name}-%{version}
 mkdir -p %{buildroot}%{_mandir}/man1
 
 # Install RAR files
-pushd %{buildroot}/%{name}
+pushd %{name}
     install -pm 755 %{name} %{buildroot}%{_bindir}/%{name}
     install -pm 755 unrar %{buildroot}%{_bindir}/unrar
     install -pm 755 default.sfx %{buildroot}%{_libdir}/default.sfx
@@ -110,16 +106,6 @@ pushd %{buildroot}/%{name}
     chmod 644 %{buildroot}%{_mandir}/man1/unrar.1.gz
 popd
 
-# Remove unused directory and tarball:
-pushd %{buildroot}
-    rm %{name}-%{version}.tar
-    rm -rf %{buildroot}/rar
-popd
-
-%post
-
-%preun
-
 %files
 %{_bindir}/%{name}
 %{_libdir}/default.sfx
@@ -134,9 +120,10 @@ popd
 %doc %{_mandir}/man1/unrar.1.gz
 
 %changelog
-* Mon Sep 29 2014 carasin berlogue <carasin DOT berlogue AT mail DOT ru> - 5.1.1-2.1.R
+* Tue Sep 30 2014 carasin berlogue <carasin DOT berlogue AT mail DOT ru> - 5.1.1-3.R
 - remove <-k> GZIP option, because GZIP has not this feature at F19 and EL7
 - bump version for correct package building on F19 and EL7
+- clean up *.spec file
 
 * Mon Sep 29 2014 carasin berlogue <carasin DOT berlogue AT mail DOT ru> - 5.1.1-2.R
 - add <unrar> and <-docs> subpackages
