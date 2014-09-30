@@ -4,7 +4,7 @@ Summary:    Utility for creation RAR archives
 Summary(ru):Утилита для создания архивов RAR
 Name:       rar
 Version:    5.1.1
-Release:    2.1%{dist}
+Release:    3%{dist}
 Epoch:      1
 
 License:    Proprietary
