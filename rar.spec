@@ -3,8 +3,8 @@
 Summary:    Utility for creation RAR archives
 Summary(ru):Утилита для создания архивов RAR
 Name:       rar
-Version:    5.1.1
-Release:    3%{dist}
+Version:    5.2.0
+Release:    1%{dist}
 Epoch:      1
 
 License:    Proprietary
@@ -29,7 +29,7 @@ RAR supports only RAR format archives, which have *.rar file name extension by
 default. ZIP and other formats are not supported.
 
 %description -l ru
-RAR — это консольное приложение, позволяющее оперировать с файлами архивов в
+RAR — это консольное приложение, позволяющее работать с файлами архивов в
 режиме командной строки. RAR предоставляет возможность сжатия, шифрования,
 восстановления данных, а также некоторые другие функции.
 
@@ -120,6 +120,9 @@ popd
 %doc %{_mandir}/man1/unrar.1.gz
 
 %changelog
+* Tue Dec 02 2014 carasin berlogue <carasin DOT berlogue AT mail DOT ru> - 5.2.0-1.R
+- update to 5.2.0
+
 * Tue Sep 30 2014 carasin berlogue <carasin DOT berlogue AT mail DOT ru> - 5.1.1-3.R
 - remove <-k> GZIP option, because GZIP has not this feature at F19 and EL7
 - bump version for correct package building on F19 and EL7
