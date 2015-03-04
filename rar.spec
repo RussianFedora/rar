@@ -120,7 +120,7 @@ popd
 %doc %{_mandir}/man1/unrar.1.gz
 
 %changelog
-* Mon Mar 02 2014 carasin berlogue <carasin DOT berlogue AT mail DOT ru> - 5.2.1-1.R
+* Mon Mar 02 2015 carasin berlogue <carasin DOT berlogue AT mail DOT ru> - 5.2.1-1.R
 - update to 5.2.1
 
 * Tue Dec 02 2014 carasin berlogue <carasin DOT berlogue AT mail DOT ru> - 5.2.0-1.R
