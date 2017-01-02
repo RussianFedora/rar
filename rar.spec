@@ -3,8 +3,12 @@
 Summary:    Utility for creation RAR archives
 Summary(ru):Утилита для создания архивов RAR
 Name:       rar
-Version:    5.3.0
-Release:    1%{dist}
+Version:    5.4.0
+%if 0%{?fedora} >= 25
+Release:	1%{?dist}.R
+%else
+Release:	1%{?dist}
+%endif
 Epoch:      1
 
 License:    Proprietary
@@ -120,6 +124,9 @@ popd
 %doc %{_mandir}/man1/unrar.1.gz
 
 %changelog
+* Mon Jan 02 2017 carasin berlogue <carasin DOT berlogue AT mail DOT ru> - 5.4.0-1.R
+- update to 5.4.0
+
 * Mon Nov 30 2015 carasin berlogue <carasin DOT berlogue AT mail DOT ru> - 5.3.0-1.R
 - update to 5.3.0
 
